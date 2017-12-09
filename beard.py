@@ -7,12 +7,12 @@ from TwitterAPI import TwitterAPI, TwitterOAuth
 SEARCH_TERM = '#christmas'
 LED_PIN = 7
 
-#By default, credential information is saved in /home/username/.local/lib/pytho$
+#By default, credential information is saved in /home/username/.local/lib/python2.7/site-packages/TwitterAPI/credentials.txt
 o=TwitterOAuth.read_file()
 api = TwitterAPI(	o.consumer_key,
-					o.consumer_secret,
-					o.access_token_key,
-					o.access_token_secret)
+			o.consumer_secret,
+			o.access_token_key,
+			o.access_token_secret)
 
 #Set up the GPIO pins
 GPIO.setmode(GPIO.BOARD)
